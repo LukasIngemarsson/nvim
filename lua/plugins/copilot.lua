@@ -23,6 +23,9 @@ return {
         highlight_headers = false,
         separator = '---',
         error_header = '> [!ERROR] Error',
+        window = {
+          width = 70,
+        },
       }
     end,
   },

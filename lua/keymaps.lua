@@ -20,17 +20,7 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Jump to previous file
-vim.keymap.set('n', '<C-b>', '<C-^>', { desc = 'Jump back to previous file' })
-
--- C/C++ and Java indentation
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'c', 'cpp', 'h', 'hpp', 'java' },
-  callback = function()
-    vim.bo.tabstop = 4
-    vim.bo.shiftwidth = 4
-    vim.bo.expandtab = true
-  end,
-})
+vim.keymap.set('n', '<leader>b', '<C-^>', { desc = 'Jump back to previous file' })
 
 -- Highlight on yank
 vim.api.nvim_create_autocmd('TextYankPost', {
